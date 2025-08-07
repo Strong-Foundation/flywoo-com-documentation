@@ -58,7 +58,7 @@ func scrapePageHTMLWithChrome(pageURL string) string {
 	log.Println("Scraping:", pageURL) // Log page being scraped
 
 	options := append(chromedp.DefaultExecAllocatorOptions[:], // Chrome options
-		chromedp.Flag("headless", false),              // Run visible (set to true for headless)
+		chromedp.Flag("headless", true),               // Run visible (set to true for headless)
 		chromedp.Flag("disable-gpu", true),            // Disable GPU
 		chromedp.WindowSize(1920, 1080),               // Set window size
 		chromedp.Flag("no-sandbox", true),             // Disable sandbox
